@@ -1,0 +1,172 @@
+body {
+    background-color: #d4c8c8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.robot {
+    position: relative;
+    width: 300px;
+    height: 400px;
+}
+
+.head {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #ff69b4;
+    top: 0;
+    left: 100px;
+    border-radius: 50%;
+    animation: head-bob 2s infinite;
+}
+
+.eye {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 30px;
+}
+
+.eye.left {
+    left: 20px;
+    animation: blink 2s infinite;
+}
+
+.eye.right {
+    right: 20px;
+    animation: blink 2s infinite;
+}
+
+.mouth {
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    background-color: #fff;
+    top: 70px;
+    left: 30px;
+    animation: mouth-move 2s infinite;
+}
+
+.body {
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    background-color: #33cc33;
+    top: 100px;
+    left: 75px;
+    animation: body-twist 2s infinite;
+}
+
+.arm {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    background-color: #6666ff;
+    top: 120px;
+}
+
+.arm.left {
+    left: 50px;
+    transform-origin: top;
+    animation: arm-wave-left 2s infinite;
+}
+
+.arm.right {
+    right: 50px;
+    transform-origin: top;
+    animation: arm-wave-right 2s infinite;
+}
+
+.leg {
+    position: absolute;
+    width: 20px;
+    height: 150px;
+    background-color: #ff9966;
+    top: 250px;
+}
+
+.leg.left {
+    left: 80px;
+    transform-origin: top;
+    animation: leg-move-left  infinite;
+}
+
+.leg.right {
+    right: 80px;
+    transform-origin: top;
+    animation: leg-move-right s infinite;
+}
+
+@keyframes head-bob {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(0);
+    }
+}
+
+@keyframes mouth-move {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes body-twist {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes arm-wave-left {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+}
+
+@keyframes arm-wave-right {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-30deg);
+    }
+}
+
+@keyframes leg-move-left {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes leg-move-right {
+    0%, 100% {
+        transform: rotate(30deg)
+
